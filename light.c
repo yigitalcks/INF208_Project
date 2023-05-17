@@ -36,16 +36,21 @@ int main(void) {
     while(TRUE) {
         reading = lightLevel(LDR_PIN);
         if(reading < 1000) {
-            // Yeşil ışık
+            digitalWrite(G_PIN, HIGH);
+            digitalWrite(R_PIN, LOW);
+            digitalWrite(Y_PIN, LOW);
         }
         else if (reading > 8000) {
-            // Sarı ışık
+            digitalWrite(G_PIN, LOW);
+            digitalWrite(R_PIN, LOW);
+            digitalWrite(Y_PIN, HIGH);
         }
         else {
-            // Kırmızı ışık
+            digitalWrite(G_PIN, LOW);
+            digitalWrite(R_PIN, HIGH);
+            digitalWrite(Y_PIN, LOW);
         }
         printf("%u\n", reading);
     }
-
     return 0;
 }
