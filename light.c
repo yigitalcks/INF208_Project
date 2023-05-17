@@ -22,7 +22,7 @@ uint32_t lightLevel(int pin) {
     return reading;
 }
 
-void main() {
+int main(void) {
 
     if(wiringPiSetup() == -1) {
         exit(1);
@@ -46,4 +46,6 @@ void main() {
         }
         printf("%u\n", reading);
     }
+
+    return 0;
 }

@@ -71,5 +71,5 @@ int main( void )
 		delay( 2000 ); 
 	}
  
-	return(0);
+	return 0;
 }
