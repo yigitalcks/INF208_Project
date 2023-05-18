@@ -33,7 +33,7 @@ int main (void) {
     pinMode (G_PIN, OUTPUT);
 
     uint32_t reading;
-    while (TRUE) {
+    while (1) {
         reading = lightLevel(LDR_PIN);
         if (reading < 1000) {
             digitalWrite (G_PIN, HIGH);
